@@ -1,7 +1,8 @@
 :root {
   --brown: #a37c3398;
   --bg: #0a0a0a;
-  --shadow: 0 2px 2px rgb(0 0 0 / 0.5);
+  --shadow: 0 10px 10px rgba(0, 0, 0, 0.932);
+  --boxshadow: 0px 31px 64px -11px rgba(0,0,0,0.77);
 }
 
 html {
@@ -31,10 +32,21 @@ body {
   z-index: -1;
   height: 100%;
   width: 100%;
-  background-image: url("img/prewed1.png");
+  background-image: url("img/floral-pattern.jpg");
   background-size: cover;
   background-position: center;
-  filter: brightness(0.5);
+  filter: brightness(0.7);
+}
+
+.hero::after {
+  content: "";
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 14%;
+  bottom: 0;
+  background: linear-gradient(0deg, #d3cece 15%, rgba(141, 135, 135, 0.048) 65px);
 }
 
 .hero-content {
@@ -43,6 +55,7 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  color:white
 }
 
 .hero h1 {
@@ -52,6 +65,20 @@ body {
   margin: 2rem 0 2rem 0;
   text-shadow: var(--shadow);
   line-height: 5rem;
+  animation-name: left-slide;
+  animation-duration: 4s;
+}
+
+@keyframes left-slide {
+  from {
+    opacity: 20%;
+    letter-spacing: 20px;
+  }
+
+  to {
+    opacity: 100%;
+    letter-spacing: normal;
+  }
 }
 
 .hero h4 {
@@ -64,22 +91,38 @@ body {
 }
 
 .hero a {
-  color: black;
-  background-color: rgba(255, 255, 255, 0.322);
-  box-shadow: var(--shadow);
+  color: white;
+  background-color: #928b8b;
+  box-shadow: var(--boxshadow);
   padding: 1rem;
   border-radius: 10px;
+  animation-duration: 2s;
+  animation-name:slidein;
 }
+
+@keyframes slidein {
+  from {
+      margin-top: 100%;
+      padding: 1rem;
+    }
+  
+    to {
+      margin-top: 0%;
+    }
+  }
 
 .hero a:hover {
   color: white;
   background-color: var(--brown);
+  transition: 0.2s linear;
 }
 
 .simply-countdown {
   overflow: hidden;
   display: table;
   font-family: "work-sans", sans-serif;
+  animation-duration: 2s;
+  animation-name:slidein;
 }
 .simply-countdown > .simply-section {
   width: 20px;
@@ -110,7 +153,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 0.5rem;
   position: fixed;
   top: 0;
   left: 0rem;
@@ -160,11 +203,20 @@ body {
   display: none;
 }
 
+.home {
+  display: flex;
+  background-color: #cfcdcb;
+  text-align: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
 .home h2 {
   color: #855b24;
   font-family: "satisfy", cursive;
   font-size: 5rem;
   font-weight: bold;
+  margin-top: 3rem;
 }
 
 .home h3 {
@@ -232,18 +284,6 @@ body {
 
 /* Mobile Phone */
 @media screen and (max-width: 576px) {
-  .hero::before {
-    content: "";
-    top: 0;
-    position: absolute;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    background-image: url("img/prewed2.png");
-    background-size: cover;
-    background-position: center;
-    filter: brightness(0.5);
-  }
 
   .hero-content {
     padding-top: 8rem;
