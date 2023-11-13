@@ -23,7 +23,11 @@ body {
   min-height: 4000px;
   margin: 0;
   padding: 0;
-  background-color: #cfcdcb;
+  background: linear-gradient(0deg, #d3cece 15%, rgba(141, 135, 135, 0.048) 65px);
+}
+
+header {
+  height: 100vh;
 }
 
 .hero::before {
@@ -31,7 +35,7 @@ body {
   top: 0;
   position: absolute;
   z-index: -1;
-  height:100vh;
+  height: 100vh;
   width: 100%;
   background-image: url("img/floral-pattern.jpg");
   background-size: cover;
@@ -56,7 +60,6 @@ body {
   flex-direction: column;
   align-items:center;
   color:white;
-  height: 100vh;
 }
 
 .hero h1 {
@@ -302,7 +305,7 @@ body {
     font-size: 1.5rem;
     padding: 1.5rem;
   }
-  
+
   .simply-countdown > .simply-section {
     padding: 3rem;
     margin: 2rem 0 3rem 1rem;
