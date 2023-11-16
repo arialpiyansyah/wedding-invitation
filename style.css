@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  font-family: "Work Sans", sans-serif;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   min-height: 4000px;
   margin: 0;
   padding: 0;
@@ -34,7 +34,7 @@ body {
   position: absolute;
   background-repeat: no-repeat;
   z-index: -1;
-  filter: brightness(0.7);
+  filter: brightness(0.75);
 }
 
 .hero-content::after {
@@ -57,15 +57,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
+  color:pink;
   height: 100vh;
 }
 
 .hero-content h1 {
   font-family: "satisfy", cursive;
-  font-size: 4rem;
+  font-size: 3.5rem;
   padding: 0;
-  margin: 1rem 0 2rem 0;
+  margin: 0.5rem 0 2rem 0;
   text-shadow: var(--shadow);
   line-height: 5rem;
   animation-name: left-slide;
@@ -85,12 +85,16 @@ body {
 }
 
 .hero-content h4 {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   margin-top: 5rem;
+  margin-bottom: 0;
+  font-weight: 400;
+  color:#3d2607;
 }
 
 .hero-content p {
   font-size: 1.4rem;
+  color: #3d2607;
 }
 
 .hero-content a {
@@ -125,25 +129,27 @@ body {
   font-family: "work-sans", sans-serif;
   animation-duration: 2s;
   animation-name: slidein;
+  color: #3d2607;
 }
 .simply-countdown > .simply-section {
   width: 20px;
   height: 20px;
-  padding: 40px 60px 40px;
+  padding: 40px 40px 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   float: left;
   margin: 0.5rem 15px 1rem;
-  background: var(--brown);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   border-radius: 10%;
+  background-color:lightgray;
 }
 
 .simply-countdown > .simply-section .simply-amount,
 .simply-countdown > .simply-section .simply-word {
   display: block;
   text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .simply-countdown > .simply-section .simply-amount {
@@ -217,6 +223,8 @@ body {
   text-align: center;
   justify-content: center;
   height: 100vh;
+  background-image: url(img/splash2.png);
+  background-size: cover;
 }
 
 .home h2 {
